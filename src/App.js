@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components'
+
+import GlobalStyle from './globalStyles'
+import Header from './components/Header'
+import Container from './components/Container'
+import Starwars from './components/Starwars'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <GlobalStyle />
+      <Header />
+      <Main>
+        <Container>
+          <Starwars />
+        </Container>
+      </Main>
+    </>
+  )
 }
 
-export default App;
+const Main = styled.main`
+  margin-top: 20px;
+`
+
+export default App
