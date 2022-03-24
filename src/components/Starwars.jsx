@@ -1,5 +1,6 @@
 import PeopleList from './PeopleList'
 import Pagination from './Pagination'
+import ModalVehicles from './ModalVehicles'
 import Spinner from './Spinner'
 
 import usePeople from '../hooks/usePeople'
@@ -15,6 +16,7 @@ function Starwars() {
     <>
       <PeopleList data={ people.results } />
       <Pagination onBack={ onBack } onNext={ onNext } />
+      <ModalVehicles title='Vehicles' />
     </>
   )
 }

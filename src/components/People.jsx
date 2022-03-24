@@ -1,9 +1,18 @@
 import styled from 'styled-components'
 
-function People({ name, gender, eyeColor, birthYear, hairColor, height, mass, skinColor }) {
+import useModalVehicles from '../hooks/useModalVehicles'
+
+function People({ name, gender, eyeColor, birthYear, hairColor, height, mass, skinColor, vehicles }) {
+
+  const { show } = useModalVehicles()
+
+  const onClick = () => {
+    show(vehicles)
+  }
+
   return (
     <PeopleWrapper>
-      <PeopleCard>
+      <PeopleCard onClick={() => onClick()}>
         <Title>{ name }</Title>
         <Info>
           <Item>
@@ -69,6 +78,10 @@ const PeopleCard = styled.div`
   border: 1px solid #dbdbdb;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.1s;
+  &:hover {
+    border: 1px solid #8b8b8b;
+  }
 `
 
 const PeopleWrapper = styled.div`

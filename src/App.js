@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { RecoilRoot } from 'recoil'
 
 import GlobalStyle from './globalStyles'
 import Header from './components/Header'
@@ -7,7 +8,7 @@ import Starwars from './components/Starwars'
 
 function App() {
   return (
-    <>
+    <RecoilRoot>
       <GlobalStyle />
       <Header />
       <Main>
@@ -15,7 +16,7 @@ function App() {
           <Starwars />
         </Container>
       </Main>
-    </>
+    </RecoilRoot>
   )
 }
 

@@ -17,6 +17,7 @@ function PeopleList({ data }) {
           hairColor={p.hair_color}
           mass={p.mass}
           skinColor={p.skin_color}
+          vehicles={p.vehicles}
           key={index} />
       ) }
 
